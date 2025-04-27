@@ -1,0 +1,189 @@
+                                                                                                                        Assignment 
+
+
+DA - Introduction to Python
+
+
+1) What are the types of Applications? 
+
+1. Web Applications
+
+Frameworks: Django, Flask, FastAPI, Pyramid
+Examples: E-commerce sites, content management systems (CMS), REST APIs
+
+2. Desktop GUI Applications
+
+Libraries: Tkinter, PyQt, Kivy, wxPython
+Examples: Media players, text editors, system utilities
+
+3. Console Applications
+Text-based programs that run in the command line Often used for scripts, automation tools, or simple interfaces
+Libraries: argparse, click, cmd
+
+4. Data Science and Machine Learning Applications
+
+Libraries: NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow, PyTorch
+Examples: Data analysis tools, prediction models, data visualizations
+
+5. Game Development
+
+Libraries: Pygame, Panda3D, PyOpenGL
+Examples: 2D/3D games, educational games, simulations
+
+6. Network Applications
+
+Use Cases: Servers, clients, chat apps, custom protocols
+Libraries: socket, Twisted, asyncio
+
+7. Mobile Applications
+
+Frameworks: Kivy, BeeWare, PyQt (to some extent)
+Though not as popular as Java/Kotlin or Swift for mobile, Python can still be used.
+
+8. Automation and Scripting
+
+Common Uses: File handling, email automation, web scraping, task scheduling
+Libraries: os, shutil, requests, BeautifulSoup, Selenium
+
+9. Embedded Systems / IoT
+
+Frameworks: MicroPython, CircuitPython
+Use Cases: Controlling hardware, sensors, Raspberry Pi projects
+
+10. Enterprise Applications
+Used in large-scale business software (ERP, CRM systems)
+
+2) What is programing? 
+Programming is the process of giving instructions to a computer to make it do something. You write these instructions using a programming language (like Python, Java, C++, etc.).
+You = the boss
+
+Computer = the worker
+
+Code = your set of instructions
+
+If you write the instructions clearly and correctly, the worker (computer) will do exactly what you ask.
+
+3) What is Python?
+Python is a high-level, interpreted programming language that's known for being:
+
+Easy to read
+
+Easy to learn
+
+Powerful enough to build everything from simple scripts to complex machine learning apps
+
+Key Features of Python:
+Simple Syntax: Feels like writing English
+
+Versatile: Used for web development, data science, AI, automation, games, and more
+
+Cross-Platform: Works on Windows, Mac, Linux, etc.
+
+Huge Community: Tons of tutorials, libraries, and support
+
+4) Write a Python program to check if a number is positive, negative or zero. 
+
+--->num = folat(input("Enter a number: "))
+      if num > 0:
+           print("The number is positive.")
+      elif num < 0:
+           print("The number is negative.")
+      else:
+           print("The number is zero.")
+o/p: -
+        if positive number is given : 
+        Enter a number:  34.098
+        The number is positive.
+         
+        if negative number is given : 
+        Enter a number:  -98.78
+        The number is negative.
+        
+       if zero is given :
+       Enter a number:  0 
+       The number is zero.
+
+7)How memory is managed in Python? 
+
+Reference Counting
+Every object in Python has an internal counter that tracks how many references point to it.
+
+When you create a new reference to an object (like assigning it to another variable), the counter increases.
+
+When a reference is deleted (like with del or when it goes out of scope), the counter decreases.
+
+When the counter reaches zero (no more references), Python immediately frees the memory.
+
+Garbage Collection (GC)
+Reference counting alone can't handle cyclic references (like two objects referring to each other).
+So, Python uses a cyclic garbage collector to periodically find groups of objects that are unreachable but still referencing each other, and then it deletes them.
+
+Python’s gc module manages this.
+
+You can even manually trigger it with gc.collect() if needed.
+
+Memory Pools (via PyMalloc)
+For efficiency, Python doesn’t directly ask the OS for memory every time you create an object.
+
+Instead, it uses a private heap space and allocates memory from it.
+
+Small objects are managed by PyMalloc, which is a specialized memory allocator optimized for Python objects.
+
+8) What is the purpose continuing statement in python?
+
+In Python, the continue statement is used inside loops (for or while) to skip the rest of the current loop iteration and move directly to the next one.
+
+In simple words:
+
+When Python sees a continue, it jumps back to the top of the loop without running the code that comes after it inside the loop.
+
+for num in range(5):
+    if num == 2:
+        continue
+    print(num)
+
+output: - 
+0
+1
+3
+4
+
+9) Write python program that swap two number with temp variable and without temp variable. 
+
+# Swap with temp variable
+a = 5
+b = 10
+
+print("Before swapping:")
+print("a =", a, "b =", b)
+
+# Swapping
+temp = a
+a = b
+b = temp
+
+print("After swapping:")
+print("a =", a, "b =", b)
+
+o/p: Before swapping:
+a = 5 b = 10
+After swapping:
+a = 10 b = 5
+
+
+10) Write a Python program to find whether a given number is even
+or odd, print out an appropriate message to the user. 
+
+# Program to check if a number is even or odd
+
+# Taking input from the user
+num = int(input("Enter a number: "))
+
+# Checking if the number is even or odd
+if num % 2 == 0:
+    print(f"{num} is Even.")
+else:
+    print(f"{num} is Odd.")
+
+o/p: Enter a number:  1
+1 is Odd.
